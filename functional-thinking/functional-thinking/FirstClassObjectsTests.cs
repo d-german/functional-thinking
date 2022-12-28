@@ -1,5 +1,7 @@
 ﻿namespace functional_thinking;
 
+public record Food();
+
 [TestFixture]
 public class FirstClassObjectsTests
 {
@@ -48,5 +50,70 @@ public class FirstClassObjectsTests
         var result = If(true, () => 1, () => 2);
 
         Assert.That(result, Is.EqualTo(1));
+    }
+
+    [Test]
+    public void ForLoopTest()
+    {
+        // creat an array of Food
+        var foods = new[] { new Food(), new Food(), new Food() };
+
+        void Cook(Food food)
+        {
+            // cook the food
+        }
+
+        void Eat(Food food)
+        {
+            // eat the food
+        }
+
+        for (var i = 0; i < foods.Length; i++)
+        {
+            Cook(foods[i]);
+        }
+
+        for (var i = 0; i < foods.Length; i++)
+        {
+            Eat(foods[i]);
+        }
+
+        for (var i = 0; i < foods.Length; i++)
+        {
+            Cook(foods[i]);
+            Eat(foods[i]);
+        }
+
+        foreach (var food in foods)
+        {
+            Cook(food);
+        }
+
+        foreach (var food in foods)
+        {
+            Eat(food);
+        }
+
+        foreach (var food in foods)
+        {
+            Cook(food);
+            Eat(food);
+        }
+
+        Array.ForEach(foods, Cook);
+        Array.ForEach(foods, Eat);
+        Array.ForEach(foods, food =>
+        {
+            Cook(food);
+            Eat(food);
+        });
+
+        foods.ForEach(Cook);
+        foods.ForEach(Eat);
+        foods.ForEach(food =>
+        {
+            Cook(food);
+            Eat(food);
+        });
     }
 }
