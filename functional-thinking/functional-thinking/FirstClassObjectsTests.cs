@@ -33,4 +33,20 @@ public class FirstClassObjectsTests
 
         Assert.That(result, Is.EqualTo(6));
     }
+
+    [Test]
+    public void IfTest()
+    {
+        T If<T>(bool condition, Func<T> trueFunc, Func<T> falseFunc)
+        {
+            if (condition)
+                return trueFunc();
+            else
+                return falseFunc();
+        }
+
+        var result = If(true, () => 1, () => 2);
+
+        Assert.That(result, Is.EqualTo(1));
+    }
 }
