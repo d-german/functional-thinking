@@ -49,7 +49,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669049540569</updated>
       <workItem from="1669049542651" duration="49000" />
-      <workItem from="1672174821730" duration="10454000" />
+      <workItem from="1672174821730" duration="15766000" />
     </task>
     <servers />
   </component>
@@ -59,5 +59,50 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/functional-thinking/FirstClassObjectsTests.cs</url>
+          <line>142</line>
+          <properties documentPath="C:\projects\cs236\functional-thinking\functional-thinking\functional-thinking\FirstClassObjectsTests.cs" initialLine="142" containingFunctionPresentation="lambda expression inside method 'ForLoopTest'">
+            <startOffsets>
+              <option value="3352" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3373" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/functional-thinking/FirstClassObjectsTests.cs</url>
+          <line>138</line>
+          <properties documentPath="C:\projects\cs236\functional-thinking\functional-thinking\functional-thinking\FirstClassObjectsTests.cs" initialLine="138" containingFunctionPresentation="lambda expression inside method 'ForLoopTest'">
+            <startOffsets>
+              <option value="3249" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3259" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/functional-thinking/FirstClassObjectsTests.cs</url>
+          <line>63</line>
+          <properties documentPath="C:\projects\cs236\functional-thinking\functional-thinking\functional-thinking\FirstClassObjectsTests.cs" initialLine="63" containingFunctionPresentation="local function 'Cook'">
+            <startOffsets>
+              <option value="1563" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1564" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

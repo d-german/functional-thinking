@@ -67,53 +67,98 @@ public class FirstClassObjectsTests
         {
             // eat the food
         }
+        //
+        // for (var i = 0; i < foods.Length; i++)
+        // {
+        //     Cook(foods[i]);
+        // }
+        //
+        // for (var i = 0; i < foods.Length; i++)
+        // {
+        //     Eat(foods[i]);
+        // }
+        //
+        // for (var i = 0; i < foods.Length; i++)
+        // {
+        //     Cook(foods[i]);
+        //     Eat(foods[i]);
+        // }
+        //
+        // foreach (var food in foods)
+        // {
+        //     Cook(food);
+        // }
+        //
+        // foreach (var food in foods)
+        // {
+        //     Eat(food);
+        // }
+        //
+        // foreach (var food in foods)
+        // {
+        //     Cook(food);
+        //     Eat(food);
+        // }
+        //
+        // Array.ForEach(foods, Cook);
+        // Array.ForEach(foods, Eat);
+        // Array.ForEach(foods, food =>
+        // {
+        //     Cook(food);
+        //     Eat(food);
+        // });
+        //
+        // foods.ForEach(Cook);
+        // foods.ForEach(Eat);
+        // foods.ForEach(food =>
+        // {
+        //     Cook(food);
+        //     Eat(food);
+        // });
+        //
+        // void TryCatch(Action action)
+        // {
+        //     try
+        //     {
+        //         action();
+        //     }
+        //     catch (Exception e)
+        //     {
+        //         Console.WriteLine(e);
+        //     }
+        // }
+        //
+        // TryCatch(() => Cook(foods[-1])); // throws 
 
-        for (var i = 0; i < foods.Length; i++)
+        Action<T> WrapLogging<T>(Action<T> action)
         {
-            Cook(foods[i]);
+            return t =>
+            {
+                try
+                {
+                    action(t);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+            };
         }
 
-        for (var i = 0; i < foods.Length; i++)
-        {
-            Eat(foods[i]);
-        }
+        var cookFoodWithLogging = WrapLogging<Food>(Cook);
 
-        for (var i = 0; i < foods.Length; i++)
-        {
-            Cook(foods[i]);
-            Eat(foods[i]);
-        }
+        cookFoodWithLogging(new Food()); // logs exception
 
-        foreach (var food in foods)
-        {
-            Cook(food);
-        }
+        var eatFoodWithLogging = WrapLogging<Food>(Eat);
 
-        foreach (var food in foods)
-        {
-            Eat(food);
-        }
+        eatFoodWithLogging(new Food()); // logs exception
 
-        foreach (var food in foods)
-        {
-            Cook(food);
-            Eat(food);
-        }
-
-        Array.ForEach(foods, Cook);
-        Array.ForEach(foods, Eat);
-        Array.ForEach(foods, food =>
+        var cookAndEatFoodWithLogging = WrapLogging<Food>(food =>
         {
             Cook(food);
             Eat(food);
         });
 
-        foods.ForEach(Cook);
-        foods.ForEach(Eat);
-        foods.ForEach(food =>
-        {
-            Cook(food);
-            Eat(food);
-        });
+        cookAndEatFoodWithLogging(new Food()); // logs exception
     }
 }
