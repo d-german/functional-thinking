@@ -5,6 +5,8 @@ public record Food();
 [TestFixture]
 public class FirstClassObjectsTests
 {
+    private static readonly Food[] Foods = new[] { new Food(), new Food(), new Food() };
+
     [Test]
     public void MultiplyTest()
     {
@@ -56,7 +58,6 @@ public class FirstClassObjectsTests
     public void ForLoopTest()
     {
         // creat an array of Food
-        var foods = new[] { new Food(), new Food(), new Food() };
 
         void Cook(Food food)
         {
@@ -67,55 +68,55 @@ public class FirstClassObjectsTests
         {
             // eat the food
         }
-        
-        for (var i = 0; i < foods.Length; i++)
+
+        for (var i = 0; i < Foods.Length; i++)
         {
-            Cook(foods[i]);
+            Cook(Foods[i]);
         }
-        
-        for (var i = 0; i < foods.Length; i++)
+
+        for (var i = 0; i < Foods.Length; i++)
         {
-            Eat(foods[i]);
+            Eat(Foods[i]);
         }
-        
-        for (var i = 0; i < foods.Length; i++)
+
+        for (var i = 0; i < Foods.Length; i++)
         {
-            Cook(foods[i]);
-            Eat(foods[i]);
+            Cook(Foods[i]);
+            Eat(Foods[i]);
         }
-        
-        foreach (var food in foods)
+
+        foreach (var food in Foods)
         {
             Cook(food);
         }
-        
-        foreach (var food in foods)
+
+        foreach (var food in Foods)
         {
             Eat(food);
         }
-        
-        foreach (var food in foods)
+
+        foreach (var food in Foods)
         {
             Cook(food);
             Eat(food);
         }
-        
-        Array.ForEach(foods, Cook);
-        Array.ForEach(foods, Eat);
-        Array.ForEach(foods, food =>
-        {
-            Cook(food);
-            Eat(food);
-        });
-        
-        foods.ForEach(Cook);
-        foods.ForEach(Eat);
-        foods.ForEach(food =>
+
+        Array.ForEach(Foods, Cook);
+        Array.ForEach(Foods, Eat);
+        Array.ForEach(Foods, food =>
         {
             Cook(food);
             Eat(food);
         });
-        
+
+        Foods.ForEach(Cook);
+        Foods.ForEach(Eat);
+        Foods.ForEach(food =>
+        {
+            Cook(food);
+            Eat(food);
+        });
+
         void WithLogging(Action action)
         {
             try
@@ -127,8 +128,8 @@ public class FirstClassObjectsTests
                 Console.WriteLine(e);
             }
         }
-        
-        WithLogging(() => Cook(foods[-1])); // throws 
+
+        WithLogging(() => Cook(Foods[-1])); // throws 
 
         Action<T> WrapLogging<T>(Action<T> action)
         {
@@ -160,5 +161,47 @@ public class FirstClassObjectsTests
         });
 
         cookAndEatFoodWithLogging(new Food()); // logs exception
+    }
+
+    [Test]
+    public void METHOD()
+    {
+        Action WrapLogging(Action action)
+        {
+            return () =>
+            {
+                try
+                {
+                    action();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+            };
+        }
+
+        void Cook(Food food)
+        {
+            // cook the food
+        }
+
+        var cookFoodWithLogging = WrapLogging(() => Cook(Foods[-1])); // defer execution of Cook, nothing is logged
+
+        cookFoodWithLogging(); // logs exception
+    }
+
+    [Test]
+    public void MakeAdderTest()
+    {
+        Func<int, int> MakeAdder(int x)
+        {
+            return y => x + y;
+        }
+
+        var add2 = MakeAdder(2);
+        var add3 = MakeAdder(3);
+
+        Assert.That(add2(3), Is.EqualTo(5));
     }
 }
