@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cdc5ff47-eac3-4c66-ad75-ce43f8ee24e4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.functional-thinking/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.functional-thinking/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functional-thinking/ExtensionMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/functional-thinking/ExtensionMethods.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functional-thinking/FirstClassObjectsTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/functional-thinking/FirstClassObjectsTests.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -11,6 +12,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/6dec5328aeab495ab706d2385c497b2f3800/68/3c0d2482/02000006pdb1High.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/6dec5328aeab495ab706d2385c497b2f3800/68/3c0d2482/02000006pdb1Low.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/6dec5328aeab495ab706d2385c497b2f3800/6b/f030870d/02000009pdb3Low.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/8efe3c8afffc40f5aa4c0ba779393e683a00/c1/845838a3/02000006pdb1Low.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/8efe3c8afffc40f5aa4c0ba779393e683a00/c9/eeb941bb/02000009pdb3Low.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/97892987fb2a9bc79b06cbf7fbedf98a5ef75c6a588983bbc038064cfaba/Select.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d82e70c4654f974cc6248aad1cee512afee4f94673ee55f686398dd368e0b9d3/Array.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -65,52 +72,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/functional-thinking/FirstClassObjectsTests.cs</url>
-          <line>143</line>
-          <properties documentPath="C:\projects\cs236\functional-thinking\functional-thinking\functional-thinking\FirstClassObjectsTests.cs" initialLine="142" containingFunctionPresentation="lambda expression inside method 'ForLoopTest'">
-            <startOffsets>
-              <option value="3126" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3147" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/functional-thinking/FirstClassObjectsTests.cs</url>
-          <line>139</line>
-          <properties documentPath="C:\projects\cs236\functional-thinking\functional-thinking\functional-thinking\FirstClassObjectsTests.cs" initialLine="138" containingFunctionPresentation="lambda expression inside method 'ForLoopTest'">
-            <startOffsets>
-              <option value="3023" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3033" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/functional-thinking/FirstClassObjectsTests.cs</url>
-          <line>133</line>
-          <properties documentPath="C:\projects\cs236\functional-thinking\functional-thinking\functional-thinking\FirstClassObjectsTests.cs" initialLine="132" containingFunctionPresentation="method 'ForLoopTest'">
-            <startOffsets>
-              <option value="2874" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3190" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/functional-thinking/FirstClassObjectsTests.cs</url>
           <line>174</line>
           <properties documentPath="C:\projects\cs236\functional-thinking\functional-thinking\functional-thinking\FirstClassObjectsTests.cs" initialLine="175" containingFunctionPresentation="lambda expression inside method 'METHOD'">
             <startOffsets>
-              <option value="3828" />
+              <option value="3849" />
             </startOffsets>
             <endOffsets>
-              <option value="3837" />
+              <option value="3858" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="8" />
@@ -120,13 +88,26 @@
           <line>178</line>
           <properties documentPath="C:\projects\cs236\functional-thinking\functional-thinking\functional-thinking\FirstClassObjectsTests.cs" initialLine="179" containingFunctionPresentation="lambda expression inside method 'METHOD'">
             <startOffsets>
-              <option value="3930" />
+              <option value="3951" />
             </startOffsets>
             <endOffsets>
-              <option value="3951" />
+              <option value="3972" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/functional-thinking/FirstClassObjectsTests.cs</url>
+          <line>216</line>
+          <properties documentPath="C:\projects\cs236\functional-thinking\functional-thinking\functional-thinking\FirstClassObjectsTests.cs" initialLine="217" containingFunctionPresentation="local function 'Add2'">
+            <startOffsets>
+              <option value="4763" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4786" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

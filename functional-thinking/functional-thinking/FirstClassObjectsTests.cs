@@ -109,13 +109,13 @@ public class FirstClassObjectsTests
             Eat(food);
         });
 
-        Foods.ForEach(Cook);
-        Foods.ForEach(Eat);
-        Foods.ForEach(food =>
-        {
-            Cook(food);
-            Eat(food);
-        });
+        // Foods.ForEach(Cook);
+        // Foods.ForEach(Eat);
+        // Foods.ForEach(food =>
+        // {
+        //     Cook(food);
+        //     Eat(food);
+        // });
 
         void WithLogging(Action action)
         {
@@ -203,5 +203,40 @@ public class FirstClassObjectsTests
         var add3 = MakeAdder(3);
 
         Assert.That(add2(3), Is.EqualTo(5));
+    }
+
+    [Test]
+    public void DeriveMap()
+    {
+        IEnumerable<int> Add2(IEnumerable<int> numbers)
+        {
+            List<int> result = new List<int>();
+
+            foreach (var number in numbers)
+            {
+                result.Add(number + 2);
+            }
+
+            return result;
+        }
+
+        IEnumerable<string> IntToString(IEnumerable<int> numbers)
+        {
+            List<string> result = new List<string>();
+
+            foreach (var number in numbers)
+            {
+                result.Add(number.ToString());
+            }
+
+            return result;
+        }
+
+        var numbers = new[] { 1, 2, 3 };
+        var numbersPlus2 = numbers.Map(x => x + 2);
+        var strings = numbers.Map(x => x.ToString());
+
+        Assert.That(numbersPlus2, Is.EqualTo(new[] { 3, 4, 5 }));
+        Assert.That(strings, Is.EqualTo(new[] { "1", "2", "3" }));
     }
 }
