@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdc5ff47-eac3-4c66-ad75-ce43f8ee24e4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.functional-thinking/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.functional-thinking/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functional-thinking/ExtensionMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/functional-thinking/ExtensionMethods.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functional-thinking/FirstClassObjectsTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/functional-thinking/FirstClassObjectsTests.cs" afterDir="false" />
     </list>
@@ -21,6 +20,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/8efe3c8afffc40f5aa4c0ba779393e683a00/c9/eeb941bb/02000009pdb3Low.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/767db1e17d404f86c3c73c54c6b20b5ff9ec43b79ef47681ae34b40a6852cf9/Where.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/97892987fb2a9bc79b06cbf7fbedf98a5ef75c6a588983bbc038064cfaba/Select.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a9feb69ff8538847471166dab959a553e1dac865be3c181b52f747b36cea3f/Aggregate.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d82e70c4654f974cc6248aad1cee512afee4f94673ee55f686398dd368e0b9d3/Array.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">

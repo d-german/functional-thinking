@@ -18,4 +18,18 @@ public static class ExtensionMethods
             yield return item;
         }
     }
+
+    public static TAccumulate Reduce<TSource, TAccumulate>(
+        this IEnumerable<TSource> source,
+        TAccumulate seed,
+        Func<TAccumulate, TSource, TAccumulate> func)
+    {
+        TAccumulate result = seed;
+        foreach (TSource element in source)
+        {
+            result = func(result, element);
+        }
+
+        return result;
+    }
 }

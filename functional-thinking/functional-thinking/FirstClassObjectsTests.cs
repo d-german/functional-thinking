@@ -310,6 +310,27 @@ public class FirstClassObjectsTests
         var person = PersonFromReducedAges(ints);
         Assert.That(person.Age, Is.EqualTo(55));
     }
+    
+    [Test]
+    public void AggerateTest()
+    {
+        var ints = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+        Person PersonFromReducedAges(IEnumerable<int> ages)
+        {
+            var result = new Person("John", 0);
+
+            foreach (var age in ages)
+            {
+                result = result with { Age = result.Age + age };
+            }
+
+            return result;
+        }
+
+        var person = PersonFromReducedAges(ints);
+        Assert.That(person.Age, Is.EqualTo(55));
+    }
 
     [Test]
     public void ReduceTotal()
