@@ -239,4 +239,96 @@ public class FirstClassObjectsTests
         Assert.That(numbersPlus2, Is.EqualTo(new[] { 3, 4, 5 }));
         Assert.That(strings, Is.EqualTo(new[] { "1", "2", "3" }));
     }
+
+    [Test]
+    public void Lazy()
+    {
+        var numbers = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        var numbersPlus2 = numbers.Map(x => x + 2);
+
+// At this point, the numbers are not yet mapped to numbersPlus2 because the mapping is lazy
+
+        var count = 0;
+        foreach (var number in numbersPlus2)
+        {
+            Console.WriteLine(number); // 3 4 5 6 7
+            count++;
+            if (count == 5) break;
+        }
+
+// At this point, only the first 5 numbers are mapped to numbersPlus2 because the foreach loop only iterates 5 times
+
+        IEnumerable<int> LessThan5(IEnumerable<int> numbers)
+        {
+            List<int> result = new List<int>();
+
+            foreach (var number in numbers)
+            {
+                if (number < 5) result.Add(number);
+            }
+
+            return result;
+        }
+    }
+
+    [Test]
+    public void Chain()
+    {
+        var numbers = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+        var numberLessThan5Plus2 = numbers
+            .Filter(x => x < 5)
+            .Map(x => x + 2);
+
+// At this point, the numbers not yet mapped
+
+        foreach (var number in numberLessThan5Plus2)
+        {
+            Console.WriteLine(number); // 3 4 5 6
+        }
+    }
+
+    private record Person(string Name, int Age);
+
+    [Test]
+    public void ReduceAge()
+    {
+        var ints = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+        Person PersonFromReducedAges(IEnumerable<int> ages)
+        {
+            var result = new Person("John", 0);
+
+            foreach (var age in ages)
+            {
+                result = result with { Age = result.Age + age };
+            }
+
+            return result;
+        }
+
+        var person = PersonFromReducedAges(ints);
+        Assert.That(person.Age, Is.EqualTo(55));
+    }
+
+    [Test]
+    public void ReduceTotal()
+    {
+        var ints = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+        int TotalFromReducedNumbers(IEnumerable<int> numbers)
+        {
+            var result = 0;
+
+            foreach (var number in numbers)
+            {
+                result += number;
+            }
+
+            return result;
+        }
+
+        var total = TotalFromReducedNumbers(ints);
+        Assert.That(total, Is.EqualTo(55));
+    }
 }

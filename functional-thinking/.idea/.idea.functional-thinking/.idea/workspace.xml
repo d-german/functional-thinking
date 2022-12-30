@@ -12,11 +12,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/021127abb49045a3af0e9479d001195a3800/09/7c06edf2/02000006pdb1Low.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/021127abb49045a3af0e9479d001195a3800/9f/6dddc2d3/02000007pdb2Low.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/6dec5328aeab495ab706d2385c497b2f3800/68/3c0d2482/02000006pdb1High.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/6dec5328aeab495ab706d2385c497b2f3800/68/3c0d2482/02000006pdb1Low.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/6dec5328aeab495ab706d2385c497b2f3800/6b/f030870d/02000009pdb3Low.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/8efe3c8afffc40f5aa4c0ba779393e683a00/c1/845838a3/02000006pdb1Low.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/8efe3c8afffc40f5aa4c0ba779393e683a00/c9/eeb941bb/02000009pdb3Low.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/767db1e17d404f86c3c73c54c6b20b5ff9ec43b79ef47681ae34b40a6852cf9/Where.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/97892987fb2a9bc79b06cbf7fbedf98a5ef75c6a588983bbc038064cfaba/Select.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d82e70c4654f974cc6248aad1cee512afee4f94673ee55f686398dd368e0b9d3/Array.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
