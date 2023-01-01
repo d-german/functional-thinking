@@ -310,9 +310,9 @@ public class FirstClassObjectsTests
         var person = PersonFromReducedAges(ints);
         Assert.That(person.Age, Is.EqualTo(55));
     }
-    
+
     [Test]
-    public void AggerateTest()
+    public void ReduceTest()
     {
         var ints = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
@@ -351,5 +351,18 @@ public class FirstClassObjectsTests
 
         var total = TotalFromReducedNumbers(ints);
         Assert.That(total, Is.EqualTo(55));
+    }
+
+    [Test]
+    public void ReduceExtensionTotal()
+    {
+        var ints = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+        var total = ints.Reduce(0, (acc, x) => acc + x);
+        Assert.That(total, Is.EqualTo(55));
+        
+        var person = ints.Reduce(new Person("John", 0), (acc, x) => acc with { Age = acc.Age + x });
+        Assert.That(person.Age, Is.EqualTo(55));
+        
     }
 }

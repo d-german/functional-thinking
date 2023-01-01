@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdc5ff47-eac3-4c66-ad75-ce43f8ee24e4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/functional-thinking/ExtensionMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/functional-thinking/ExtensionMethods.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functional-thinking/FirstClassObjectsTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/functional-thinking/FirstClassObjectsTests.cs" afterDir="false" />
-    </list>
+    <list default="true" id="cdc5ff47-eac3-4c66-ad75-ce43f8ee24e4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
