@@ -18,10 +18,10 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/6dec5328aeab495ab706d2385c497b2f3800/6b/f030870d/02000009pdb3Low.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/8efe3c8afffc40f5aa4c0ba779393e683a00/c1/845838a3/02000006pdb1Low.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/8efe3c8afffc40f5aa4c0ba779393e683a00/c9/eeb941bb/02000009pdb3Low.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/767db1e17d404f86c3c73c54c6b20b5ff9ec43b79ef47681ae34b40a6852cf9/Where.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/97892987fb2a9bc79b06cbf7fbedf98a5ef75c6a588983bbc038064cfaba/Select.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a9feb69ff8538847471166dab959a553e1dac865be3c181b52f747b36cea3f/Aggregate.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d82e70c4654f974cc6248aad1cee512afee4f94673ee55f686398dd368e0b9d3/Array.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/767db1e17d404f86c3c73c54c6b20b5ff9ec43b79ef47681ae34b40a6852cf9/Where.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/97892987fb2a9bc79b06cbf7fbedf98a5ef75c6a588983bbc038064cfaba/Select.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a9feb69ff8538847471166dab959a553e1dac865be3c181b52f747b36cea3f/Aggregate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d82e70c4654f974cc6248aad1cee512afee4f94673ee55f686398dd368e0b9d3/Array.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -33,23 +33,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "terminal",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\dgerman\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\dgerman\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\dgerman\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\dgerman\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\dgerman\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\dgerman\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -60,6 +60,7 @@
       <updated>1669049540569</updated>
       <workItem from="1669049542651" duration="49000" />
       <workItem from="1672174821730" duration="15766000" />
+      <workItem from="1672766639050" duration="3730000" />
     </task>
     <servers />
   </component>
@@ -75,42 +76,55 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/functional-thinking/FirstClassObjectsTests.cs</url>
-          <line>174</line>
+          <line>176</line>
           <properties documentPath="C:\projects\cs236\functional-thinking\functional-thinking\functional-thinking\FirstClassObjectsTests.cs" initialLine="175" containingFunctionPresentation="lambda expression inside method 'METHOD'">
             <startOffsets>
-              <option value="3849" />
+              <option value="3869" />
             </startOffsets>
             <endOffsets>
-              <option value="3858" />
+              <option value="3878" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/functional-thinking/FirstClassObjectsTests.cs</url>
-          <line>178</line>
+          <line>180</line>
           <properties documentPath="C:\projects\cs236\functional-thinking\functional-thinking\functional-thinking\FirstClassObjectsTests.cs" initialLine="179" containingFunctionPresentation="lambda expression inside method 'METHOD'">
             <startOffsets>
-              <option value="3951" />
+              <option value="3971" />
             </startOffsets>
             <endOffsets>
-              <option value="3972" />
+              <option value="3992" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/functional-thinking/FirstClassObjectsTests.cs</url>
-          <line>216</line>
+          <line>218</line>
           <properties documentPath="C:\projects\cs236\functional-thinking\functional-thinking\functional-thinking\FirstClassObjectsTests.cs" initialLine="217" containingFunctionPresentation="local function 'Add2'">
             <startOffsets>
-              <option value="4763" />
+              <option value="4783" />
             </startOffsets>
             <endOffsets>
-              <option value="4786" />
+              <option value="4806" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a9feb69ff8538847471166dab959a553e1dac865be3c181b52f747b36cea3f/Aggregate.cs</url>
+          <line>11</line>
+          <properties documentPath="C:\Users\dgerman\AppData\Roaming\JetBrains\Rider2022.3\resharper-host\SourcesCache\a9feb69ff8538847471166dab959a553e1dac865be3c181b52f747b36cea3f\Aggregate.cs" initialLine="11" containingFunctionPresentation="method 'Aggregate'">
+            <startOffsets>
+              <option value="389" />
+            </startOffsets>
+            <endOffsets>
+              <option value="408" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
