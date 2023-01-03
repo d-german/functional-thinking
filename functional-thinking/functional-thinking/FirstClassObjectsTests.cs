@@ -356,13 +356,13 @@ public class FirstClassObjectsTests
     [Test]
     public void ReduceExtensionTotal()
     {
-        var ints = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+var ints = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-        var total = ints.Reduce(0, (acc, x) => acc + x);
-        Assert.That(total, Is.EqualTo(55));
-        
-        var person = ints.Reduce(new Person("John", 0), (acc, x) => acc with { Age = acc.Age + x });
-        Assert.That(person.Age, Is.EqualTo(55));
+var total = ints.Reduce(0, (acc, x) => acc + x);
+Assert.That(total, Is.EqualTo(55));
+
+var person = ints.Reduce(new Person("John", 0), (acc, x) => acc with { Age = acc.Age + x });
+Assert.That(person.Age, Is.EqualTo(55));
         
     }
 }
