@@ -7,11 +7,13 @@ public record Food();
 [TestFixture]
 public class FirstClassObjectsTests
 {
-    private static readonly Food[] Foods = new[] { new Food(), new Food(), new Food() };
+    private static Food[] _foods = new[] { new Food(), new Food(), new Food() };
+    private const string MySeparator = " ";
 
     [Test]
     public void MultiplyTest()
     {
+        Console.WriteLine(MySeparator);
         // declare a function that multiplies two numbers
         Func<double, double, double> multiply = (x, y) => x * y;
 
@@ -71,41 +73,41 @@ public class FirstClassObjectsTests
             // eat the food
         }
 
-        for (var i = 0; i < Foods.Length; i++)
+        for (var i = 0; i < _foods.Length; i++)
         {
-            Cook(Foods[i]);
+            Cook(_foods[i]);
         }
 
-        for (var i = 0; i < Foods.Length; i++)
+        for (var i = 0; i < _foods.Length; i++)
         {
-            Eat(Foods[i]);
+            Eat(_foods[i]);
         }
 
-        for (var i = 0; i < Foods.Length; i++)
+        for (var i = 0; i < _foods.Length; i++)
         {
-            Cook(Foods[i]);
-            Eat(Foods[i]);
+            Cook(_foods[i]);
+            Eat(_foods[i]);
         }
 
-        foreach (var food in Foods)
+        foreach (var food in _foods)
         {
             Cook(food);
         }
 
-        foreach (var food in Foods)
+        foreach (var food in _foods)
         {
             Eat(food);
         }
 
-        foreach (var food in Foods)
+        foreach (var food in _foods)
         {
             Cook(food);
             Eat(food);
         }
 
-        Array.ForEach(Foods, Cook);
-        Array.ForEach(Foods, Eat);
-        Array.ForEach(Foods, food =>
+        Array.ForEach(_foods, Cook);
+        Array.ForEach(_foods, Eat);
+        Array.ForEach(_foods, food =>
         {
             Cook(food);
             Eat(food);
@@ -131,7 +133,7 @@ public class FirstClassObjectsTests
             }
         }
 
-        WithLogging(() => Cook(Foods[-1])); // throws 
+        WithLogging(() => Cook(_foods[-1])); // throws 
 
         Action<T> WrapLogging<T>(Action<T> action)
         {
@@ -166,7 +168,7 @@ public class FirstClassObjectsTests
     }
 
     [Test]
-    public void METHOD()
+    public void Method()
     {
         Action WrapLogging(Action action)
         {
@@ -188,7 +190,7 @@ public class FirstClassObjectsTests
             // cook the food
         }
 
-        var cookFoodWithLogging = WrapLogging(() => Cook(Foods[-1])); // defer execution of Cook, nothing is logged
+        var cookFoodWithLogging = WrapLogging(() => Cook(_foods[-1])); // defer execution of Cook, nothing is logged
 
         cookFoodWithLogging(); // logs exception
     }
@@ -212,7 +214,7 @@ public class FirstClassObjectsTests
     {
         IEnumerable<int> Add2(IEnumerable<int> numbers)
         {
-            List<int> result = new List<int>();
+            var result = new List<int>();
 
             foreach (var number in numbers)
             {
@@ -224,7 +226,7 @@ public class FirstClassObjectsTests
 
         IEnumerable<string> IntToString(IEnumerable<int> numbers)
         {
-            List<string> result = new List<string>();
+            var result = new List<string>();
 
             foreach (var number in numbers)
             {
@@ -262,7 +264,7 @@ public class FirstClassObjectsTests
 
         IEnumerable<int> LessThan5(IEnumerable<int> numbers)
         {
-            List<int> result = new List<int>();
+            var result = new List<int>();
 
             foreach (var number in numbers)
             {

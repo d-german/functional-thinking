@@ -24,8 +24,8 @@ public static class ExtensionMethods
         TAccumulate seed,
         Func<TAccumulate, TSource, TAccumulate> func)
     {
-        TAccumulate result = seed;
-        foreach (TSource element in source)
+        var result = seed;
+        foreach (var element in source)
         {
             result = func(result, element);
         }
