@@ -237,6 +237,7 @@ public class FirstClassObjectsTests
         }
 
         var numbers = new[] { 1, 2, 3 };
+        var bla = numbers.First();
         var numbersPlus2 = numbers.Map(x => x + 2);
         var strings = numbers.Map(x => x.ToString());
 
